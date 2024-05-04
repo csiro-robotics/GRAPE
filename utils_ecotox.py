@@ -14,7 +14,7 @@ from nltk.corpus import stopwords, words, wordnet
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.probability import FreqDist
-from num2words import num2words
+import inflect
 
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -108,7 +108,8 @@ def preprocess_text(text, lemmatizer):
     text = text.replace('\n', '') # Remove newline characters
     text = re.sub(r'[^\w\s]', '', text) # Remove punctuations
     text = text.lower()  # Convert to lower case
-    text = re.sub('(\d+)', lambda m: num2words(m.group()), text) # Replace numbers with words
+    p = inflect.engine()
+    text = re.sub('(\d+)', lambda m: p.number_to_words(m.group()), text) # Replace numbers with words
 
     # Remove stop words   
     text_tokens = word_tokenize(text)
