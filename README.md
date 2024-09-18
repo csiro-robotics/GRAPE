@@ -41,13 +41,14 @@ python 1_ecotox_data_prep.py
 python 2_ecotox_GNN_benchmark.py --name_str 19_02_24_ --train_flag 1 
 # Or for inference
 python 2_ecotox_GNN_benchmark.py --name_str 19_02_24_ --train_flag 0
-
+```
 
 
 ## Citation
 
 If you find this work useful, please consider citing:
 
+```
 @article{anand2024grape,
 	author = {Gaurangi Anand and Piotr Koniusz and Anupama Kumar and Lisa A. Golding and Matthew J. Morgan and Peyman Moghadam},
 	title = {Graph neural networks-enhanced relation prediction for ecotoxicology (GRAPE)},
@@ -55,8 +56,10 @@ If you find this work useful, please consider citing:
 	volume = {472},
 	pages = {134456},
 	year = {2024},
-	issn = {0304-3894}}
+	issn = {0304-3894}
+}
+```
 
-## Acknowledgements 
+### Acknowledgements
 
 This research was partially funded by the Spatiotemporal Activity at the Machine Learning and Artificial Intelligence Future Science Platform (MLAI FSP) and Science Digital at the Commonwealth Scientific and Industrial Research Organisation (CSIRO), Australia. 
